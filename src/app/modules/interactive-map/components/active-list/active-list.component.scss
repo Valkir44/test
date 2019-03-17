@@ -1,0 +1,13 @@
+@import "../../pages/total-page/total-page.component";
+
+.active__list {
+  width: 250px;
+  ul {
+    list-style: none;
+    li {
+      cursor: pointer;
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+}

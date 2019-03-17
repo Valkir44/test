@@ -1,0 +1,10 @@
+<section class="total">
+  <div class="container">
+    <h1 class="title">Interactive map!</h1>
+    <div class="list__container">
+      <app-data-list [dataList]="list"></app-data-list>
+      <app-map (sentToDataList)="receive($event)"></app-map>
+      <app-active-list [dataList]="list" (sentToDataList)="receive($event)"></app-active-list>
+    </div>
+  </div>
+</section>

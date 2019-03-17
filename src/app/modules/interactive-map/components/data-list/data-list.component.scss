@@ -1,0 +1,22 @@
+@import "../../pages/total-page/total-page.component";
+
+.date__list {
+  width: 250px;
+  ul {
+    list-style: none;
+    li {
+      cursor: pointer;
+    }
+  }
+  .date__list-parent {
+    p {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+  .date__list-child {
+    p {
+      font-size: 18px;
+    }
+  }
+}

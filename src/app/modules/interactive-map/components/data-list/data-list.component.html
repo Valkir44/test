@@ -1,0 +1,24 @@
+<section class="date__list">
+  <div class="title__container">
+    <h2 class="list__title">Data List</h2>
+    <p *ngIf="!check" class="close" (click)="closeList()">{{closeCheck ? '&#45;' : '&#43;'}}</p>
+  </div>
+  <div *ngIf="closeCheck">
+    <ul *ngIf="dataList.length > 0">
+      <li class="date__list-parent" *ngFor="let parentList of dataList">
+        <p *ngIf="parentList.children.length > 0" (click)="addToMap(parentList)">{{parentList.name}}</p>
+        <ul>
+          <li class="date__list-child" *ngFor="let childList of parentList.children">
+            <p (click)="addToMap(childList)">{{childList.name}}</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="check" class="empty__list">
+    <p>Nothing to add now!</p>
+  </div>
+</section>
+
+
+

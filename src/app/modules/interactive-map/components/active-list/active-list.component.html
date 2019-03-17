@@ -1,0 +1,12 @@
+<section class="active__list">
+  <h2 class="list__title">Active List</h2>
+  <ul *ngIf="list.length > 0">
+    <li class="date__list-parent" *ngFor="let child of list">
+      <p (click)="deleteFromMap(child)">{{child.name}}</p>
+    </li>
+  </ul>
+  <div *ngIf="list.length <= 0" class="empty__list">
+    <p>Nothing Yet!</p>
+  </div>
+</section>
+
